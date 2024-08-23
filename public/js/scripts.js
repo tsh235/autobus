@@ -34,7 +34,7 @@ const renderBusData = (buses) => {
     row.innerHTML = `
       <td>${bus.busNumber}</td>
       <td>${bus.startPoint} - ${bus.endPoint}</td>
-      <td>${formateDate(nextDepartureDateTimeUTC).toLocaleString()}</td>
+      <td>${formateDate(nextDepartureDateTimeUTC).split('-').reverse().join('.')}</td>
       <td>${formateTime(nextDepartureDateTimeUTC)}</td>
     `;
     tableBody.append(row);
